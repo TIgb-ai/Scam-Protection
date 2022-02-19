@@ -1,4 +1,3 @@
-from ast import Not
 import nextcord
 from nextcord import *
 from nextcord.ext import commands
