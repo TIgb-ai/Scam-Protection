@@ -1,0 +1,10 @@
+nextcord==2.0.0a7
+asyncio
+python-dotenv==0.15.0
+pathspec==0.8.1
+pathlib
+requests
+discordmongopy==0.3.0
+dnspython==2.1.0
+pymongo
+psutil
