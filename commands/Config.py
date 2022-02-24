@@ -27,7 +27,7 @@ class Config(commands.Cog):
 #####################################################################################################################################################   
 #####################################################################################################################################################   
      
-    @nextcord.slash_command(guild_ids=[TESTING_GUILD], description="Configure Your Server Settings")
+    @nextcord.slash_command(description="Configure Your Server Settings")
     async def config(self,interaction: nextcord.Interaction):
         """
         This is the config slash command that will be the prefix of all commands below.
