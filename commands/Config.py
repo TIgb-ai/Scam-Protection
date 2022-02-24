@@ -1,4 +1,3 @@
-from tkinter import N
 import nextcord
 from nextcord import *
 from nextcord.ext import commands
