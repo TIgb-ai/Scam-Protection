@@ -5,8 +5,6 @@ from nextcord import Interaction, SlashOption
 import pymongo
 from nextcord.abc import GuildChannel
 from datetime import datetime
-import humanfriendly
-from humanfriendly import *
 
 mongodbai = pymongo.MongoClient('mongodb+srv://mira:immune@mira.bqrza.mongodb.net/mira?retryWrites=true&w=majority')
 dbclient = mongodbai['scam']
