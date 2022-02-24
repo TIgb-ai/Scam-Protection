@@ -1,11 +1,7 @@
-import os
-import nextcord
-import logging
+import os , nextcord , logging , json ,datetime, asyncio
 from dotenv import load_dotenv
 from nextcord.ext import commands
-import json
-import datetime
-import asyncio
+
 
 # Local code
 
@@ -18,7 +14,7 @@ class Scam_Protector(commands.Cog):
     # Greetings
     @commands.Cog.listener()
     async def on_ready(self):
-        await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name='scam links'))
+        await bot.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name='for scam links'))
         print(f'Logged in as {self.bot.user} ({self.bot.user.id})')
         
 
