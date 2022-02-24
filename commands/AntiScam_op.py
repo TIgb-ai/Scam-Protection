@@ -43,6 +43,8 @@ class optfeature(commands.Cog):
             pass
         elif mention_f is None:
             pass
+        if message.user.guild_permissions.manage_message:
+            pass
         if chan_f and mention_f is not None:
             chan = log_collection.find({'_id': int(message.guild.id)})
             # mention = mention_prot.find_one({'_id': int(message.guild.id)})
