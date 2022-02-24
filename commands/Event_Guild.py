@@ -2,7 +2,6 @@ import nextcord
 from nextcord import *
 from nextcord.ext import commands
 from nextcord import Interaction, SlashOption
-from psutil import NIC_DUPLEX_UNKNOWN
 import pymongo
 from nextcord.abc import GuildChannel
 from datetime import datetime
