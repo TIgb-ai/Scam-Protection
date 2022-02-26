@@ -5,6 +5,6 @@ pathspec==0.8.1
 pathlib
 requests
 discordmongopy==0.3.0
-dnspython==2.1.0
-pymongo
+dnspython
+pymongo==3.12.2
 psutil
