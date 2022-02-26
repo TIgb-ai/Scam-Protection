@@ -4,7 +4,7 @@ from nextcord.ext import commands
 from nextcord import Interaction, SlashOption
 from nextcord.abc import GuildChannel
 from datetime import datetime
-
+from nextcord.ext.commands import has_permissions, MissingPermissions
 #####################################################################################################################################################
 ##################################################################################################################################################### 
 mongodbai = pymongo.MongoClient('mongodb+srv://mira:immune@mira.bqrza.mongodb.net/mira?retryWrites=true&w=majority')
@@ -43,7 +43,7 @@ class optfeature(commands.Cog):
             pass
         elif mention_f is None:
             pass
-        if message.user.guild_permissions.manage_message:
+        if message.author.guild_permissions.manage_messages:
             pass
         if chan_f and mention_f is not None:
             chan = log_collection.find({'_id': int(message.guild.id)})
