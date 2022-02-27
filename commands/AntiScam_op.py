@@ -12,6 +12,7 @@ dbclient = mongodbai['scam']
 log_collection = dbclient['logs_chan']
 mention_prot = dbclient['mention_prot_state']
 blacklisted_user = dbclient['blacklisted_user']
+whitelisted = dbclient['whitelisted']
 embed_colour = 0x36393F
 #####################################################################################################################################################
 ##################################################################################################################################################### 
@@ -39,12 +40,20 @@ class optfeature(commands.Cog):
             pass
         chan_f = log_collection.find_one({'_id': int(message.guild.id)})
         mention_f = mention_prot.find_one({'_id': int(message.guild.id)})
+        role_f = whitelisted.find_one({'_id': int(message.guild.id)})
         if chan_f is None:
             pass
         elif mention_f is None:
             pass
+        if message.author is nextcord.Member.bot:
+            return
         if message.author.guild_permissions.manage_messages:
+            return
+        if message.author.guild_permissions.administrator:
+            return
+        if role_f is None:
             pass
+
         if chan_f and mention_f is not None:
             chan = log_collection.find({'_id': int(message.guild.id)})
             # mention = mention_prot.find_one({'_id': int(message.guild.id)})
