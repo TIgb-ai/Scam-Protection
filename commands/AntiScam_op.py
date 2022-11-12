@@ -7,7 +7,7 @@ from datetime import datetime
 from nextcord.ext.commands import has_permissions, MissingPermissions
 #####################################################################################################################################################
 ##################################################################################################################################################### 
-mongodbai = pymongo.MongoClient('mongodb+srv://mira:immune@mira.bqrza.mongodb.net/mira?retryWrites=true&w=majority')
+mongodbai = pymongo.MongoClient('database_link')
 dbclient = mongodbai['scam']
 log_collection = dbclient['logs_chan']
 mention_prot = dbclient['mention_prot_state']
